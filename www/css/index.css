@@ -1,0 +1,122 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+#send_items {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+progress {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    border: 0;
+    height: 3px;
+    padding: 0;
+    margin-bottom: 5px;
+    color: #f7931e;
+}
+
+#dbg_console {
+    display: none;
+}
+
+.tbl-header {
+    width: 100%;
+    text-align: center;
+    background-color: blanchedalmond;
+    display: flex;
+}
+
+.tbl-header div {
+    width: 50%;
+    padding: 10px;
+}
+.controls {
+    position: absolute;
+    width: 100%;
+    top: 90%;
+}
+
+.progress {
+    width: 0;
+    height: 2px;
+    background-color: #f7931e;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 3px;
+}

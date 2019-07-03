@@ -1,0 +1,26 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.jsmobile.plugins.sms": {
+      "PACKAGE_NAME": "com.legacy.smssender"
+    },
+    "cordova-plugin-advanced-http": {
+      "OKHTTP_VERSION": "3.10.0",
+      "PACKAGE_NAME": "com.legacy.smssender"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.legacy.smssender"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.legacy.smssender"
+    }
+  }
+}
